@@ -8,22 +8,28 @@
 $var = 0;
 // TODO votre code ici.
 
-
+if ($var === false) {
+    echo "Vide";
+}
+elseif ($var === true) {
+    echo "Pas vide";
+}
 
 
 /**
  * 2. Détruisez la variable déclarée, tentez de l'afficher ensuite en utilisant un print_r.
  */
-$eraseMe = "Please erase me !";
 // TODO votre code ici.
 
+print_r($eraseme);
 
 /**
  * 3. Déclarez vous même un tableau et utilisez var_dump pour afficher toutes les informations de debug.
  */
 // TODO votre code ici.
-
+$myArray = ["orange", "pomme"];
 echo "<br>";
+var_dump($myArray);
 
 /**
  * 4. Faites la même chose avec le même tableau, mais pour la méthode print_r.
@@ -31,7 +37,7 @@ echo "<br>";
 // TODO votre code ici.
 
 echo "<br>";
-
+print_r($myArray);
 
 /**
  * 5. A l'aide de la méthode isset, testez si la clé du tableau associatif 'doNotExists' existe ( SANS TOUCHER AU TABLEAU )
@@ -39,8 +45,16 @@ echo "<br>";
  */
 $tab = ["test" => true, "name" => "Doe", "age" => 32];
 // TODO Votre code ici.
-
-
+foreach ($tab as $keys){
+if (var_dump(isset($keys)) === false) {
+    echo "Existe pas";
+    }
+}
+foreach ($tab as $keys){
+    if (var_dump(isset($keys)) === true) {
+        echo "Existe";
+    }
+}
 /**
  * 6. Créez une variable contenant:
  *    - un booléen
